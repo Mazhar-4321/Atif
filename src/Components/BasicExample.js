@@ -11,42 +11,40 @@ const [data,setData]=useState([
 );
 const deleteItems=(e)=>
 {
- var index=e.target.value;//2
- console.log(index)
- let tempData=[...data];
-  let data1=[];
-//  for(var i=0;i<tempData.length;i++) 
-//  {
-//     if(i!=index)
-//     {
-//         console.log(tempData[i])
-//        data1.push(tempData[i])
-//     }
-//  }
-data1= tempData.filter((e,i)=>{
-   
-   /*
-      0,2
-      1,2
-      2,2
-      3,2
-   */
-    return i!=index
-});
-console.log(data1)
-setData(data1)
+let key = e.target.id;
+   let tempData=[...data]
+    tempData=tempData.filter(e=>e.key!=key)
+    setData(tempData)
+}
+const changeInput=(e)=>
+{
+    let tempdata=[...data];
+    console.log(e.key);
+    tempdata=tempdata.filter((el)=>
+    {
+        if(e.key===el.key)
+        {
+            el.selectedValue=e.value;
+        }
+        return el;
+    })
+    setData(tempdata)
+
 }
  const setNewData=()=>
  {
     let b=[...data];
+    console.log(b.length)
     //console.log(b);
+    let random=Math.random();
     b.push({
-        "key":b.length,
+        "key":random+"",
         "name":"achajcabv",
+         "selectedValue":'',
         "options":[
-            { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' }
+            { value: 'chocolate',key:random, label: 'Chocolate',d:'chocolate' },
+    { value: 'strawberry',key:random, label: 'Strawberry',d:'' },
+    { value: 'vanilla',key:random, label: 'Vanilla',d:'' }
         ]
     })
    
@@ -60,10 +58,12 @@ setData(data1)
  return  ( 
  <>
     <h1>info</h1>
- {data.map((e,i)=>{
-    return <div  id="container">
-    <Select id="mazhar" options={e.options} />
-     <Formik
+ {data.length>0? data.map((e,i)=>{
+    return <div key={e.key} id="container">
+    <Select id={i} key={e.key} onChange={changeInput} options={e.options} defaultInputValue={e.selectedValue}  />
+    
+    <button type="submit" id={e.key} name={i} value={i} onClick={deleteItems}>Submit{Math.floor(e.key*1000)}</button>
+     {/* <Formik
       initialValues={{ name: e.name }}
     //   onSubmit={(values, actions) => {
     //     setTimeout(() => {
@@ -85,11 +85,11 @@ setData(data1)
           <button type="submit" value={i} onClick={deleteItems}>Submit</button>
         </form>
       )}
-    </Formik>
+    </Formik> */}
    
     </div>
 
- })}
+ }):''}
     
     <button onClick={setNewData}>Add Debit Account </button>
   </>
