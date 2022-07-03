@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "//mazhar-4321.github.io/Atif/static/css/main.0170007b.chunk.css",
+    "main.js": "//mazhar-4321.github.io/Atif/static/js/main.95083a97.chunk.js",
+    "main.js.map": "//mazhar-4321.github.io/Atif/static/js/main.95083a97.chunk.js.map",
+    "runtime-main.js": "//mazhar-4321.github.io/Atif/static/js/runtime-main.594a727e.js",
+    "runtime-main.js.map": "//mazhar-4321.github.io/Atif/static/js/runtime-main.594a727e.js.map",
+    "static/css/2.383c0125.chunk.css": "//mazhar-4321.github.io/Atif/static/css/2.383c0125.chunk.css",
+    "static/js/2.95c42ab9.chunk.js": "//mazhar-4321.github.io/Atif/static/js/2.95c42ab9.chunk.js",
+    "static/js/2.95c42ab9.chunk.js.map": "//mazhar-4321.github.io/Atif/static/js/2.95c42ab9.chunk.js.map",
+    "static/js/3.b1554468.chunk.js": "//mazhar-4321.github.io/Atif/static/js/3.b1554468.chunk.js",
+    "static/js/3.b1554468.chunk.js.map": "//mazhar-4321.github.io/Atif/static/js/3.b1554468.chunk.js.map",
+    "index.html": "//mazhar-4321.github.io/Atif/index.html",
+    "static/css/2.383c0125.chunk.css.map": "//mazhar-4321.github.io/Atif/static/css/2.383c0125.chunk.css.map",
+    "static/css/main.0170007b.chunk.css.map": "//mazhar-4321.github.io/Atif/static/css/main.0170007b.chunk.css.map",
+    "static/js/2.95c42ab9.chunk.js.LICENSE.txt": "//mazhar-4321.github.io/Atif/static/js/2.95c42ab9.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "//mazhar-4321.github.io/Atif/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.594a727e.js",
+    "static/css/2.383c0125.chunk.css",
+    "static/js/2.95c42ab9.chunk.js",
+    "static/css/main.0170007b.chunk.css",
+    "static/js/main.95083a97.chunk.js"
+  ]
+}
