@@ -62,7 +62,7 @@ const changeInput=(e)=>
     return <div key={e.key} id="container">
     <Select id={i} key={e.key} onChange={changeInput} options={e.options} defaultInputValue={e.selectedValue}  />
     
-    <button type="submit" id={e.key} name={i} value={i} onClick={deleteItems}>Submit{Math.floor(e.key*1000)}</button>
+    <button type="submit" id={e.key} name={i} value={i} onClick={deleteItems}>x</button>
      {/* <Formik
       initialValues={{ name: e.name }}
     //   onSubmit={(values, actions) => {
